@@ -1,0 +1,38 @@
+version: 2
+name: custom
+displayName: Custom MCP Servers
+
+registry:
+  obsidian-mcp:
+    description: "MCP server for controlling and interacting with an Obsidian vault"
+    title: "Obsidian MCP"
+    type: server
+    dateAdded: "2026-03-06T00:00:00Z"
+    image: obsidian-mcp-server:latest
+    ref: ""
+    readme: ""
+    toolsUrl: ""
+    source: ""
+    upstream: ""
+    icon: ""
+    env:
+      OBSIDIAN_API_KEY: ${OBSIDIAN_API_KEY}
+      OBSIDIAN_HOST: ${OBSIDIAN_HOST:127.0.0.1}
+      OBSIDIAN_PORT: ${OBSIDIAN_PORT:27124}
+      OBSIDIAN_PROTOCOL: ${OBSIDIAN_PROTOCOL:https}
+    tools:
+      - name: list_notes
+      - name: read_note
+      - name: write_note
+      - name: append_note
+      - name: search_notes
+      - name: delete_note
+    metadata:
+      category: productivity
+      tags:
+        - obsidian
+        - notes
+        - knowledge
+        - automation
+      license: MIT
+      owner: local
